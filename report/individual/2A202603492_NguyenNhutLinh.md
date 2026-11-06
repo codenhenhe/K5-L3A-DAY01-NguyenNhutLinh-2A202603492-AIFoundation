@@ -27,10 +27,10 @@
 | 4b. LLM lớn zero-shot | 0.909 | 1.000 | 0.952 | 0.952 | 0.000 | 1.037 | 513.868 | 2618.370 | 0.0 |
 | 4c. LLM nhỏ few-shot | 0.952 | 1.000 | 0.976 | 0.976 | 0.000 | 0.592 | 1993.996 | 2897.728 | 0.0 |
 
-• Hàng LLM chỉ đo trên SUB (40 tin) → so sánh chất lượng công bằng bằng cột 'F1 (SUB 40)'.
-• SUB chỉ 40 tin: 1 tin sai đổi F1 vài điểm. Chênh < ~0.05 F1 coi như HOÀ — đừng xếp hạng theo số lẻ.
-• Inference đo TỪ VĂN BẢN THÔ → NHÃN (gồm cả vectorize / encode). p50/p95 = gọi từng tin một, như một request thật.
-• train (s) của 3a/3b/3c = thời gian encoder MiniLM encode tập train (+ train đầu LogReg / MLP); LLM = 0 vì không train. Số đo phụ thuộc CPU/GPU của Colab.
+- Hàng LLM chỉ đo trên SUB (40 tin) -> so sánh chất lượng công bằng bằng cột 'F1 (SUB 40)'.
+- SUB chỉ 40 tin: 1 tin sai đổi F1 vài điểm. Chênh < ~0.05 F1 coi như HOÀ — đừng xếp hạng theo số lẻ.
+- Inference đo TỪ VĂN BẢN THÔ -> NHÃN (gồm cả vectorize / encode). p50/p95 = gọi từng tin một, như một request thật.
+- train (s) của 3a/3b/3c = thời gian encoder MiniLM encode tập train (+ train đầu LogReg / MLP); LLM = 0 vì không train. Số đo phụ thuộc CPU/GPU của Colab.
 
 ## 3. Dự đoán và thực tế
 
